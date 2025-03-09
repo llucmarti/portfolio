@@ -1,21 +1,23 @@
 ---
+import "./src/styles/global.css";
+import SectionContainer from "../components/SectionContainer.astro";
 import Header from "../components/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
-import "./src/styles/global.css";
-import LinkedInIcon from "../icons/LinkedIn.astro";
+
 import SocialPill from "../components/SocialPill.astro";
-import GithubIcon from "../icons/Github.astro";
-import MailIcon from "../icons/Mail.astro";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GithubIcon from "../components/icons/Github.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 ---
 
 <Layout
   title="Lluc's portfolio - Software engineer"
   description="Lluc Martí Calveres is a software engineer with more than 3 years of experience, looking for new opportunities to grow and learn."
 >
-  <section class="w-full mx-auto lg:w-[740px] py-44">
+  <SectionContainer class="py-44 pb-24">
     <main>
       <img class="rounded-full w-12 h-12 mb-4" src="/lluc_4.jpg" alt="logo" />
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4">
@@ -47,11 +49,19 @@ import MailIcon from "../icons/Mail.astro";
           <GithubIcon class="w-6 h-6" />
           Github
         </SocialPill>
-        <SocialPill href="https://www.linkedin.com/in/llucmc/">
+        <SocialPill href="mailto:lluc.marti.calveres@gmail.com">
           <MailIcon class="w-6 h-6" />
           lluc.marti.calveres@gmail.com
         </SocialPill>
       </nav>
     </main>
-  </section>
+  </SectionContainer>
+
+  <SectionContainer id="experience">
+    <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <Briefcase class="size-7" />
+      Experience
+    </h2>
+    <Experience />
+  </SectionContainer>
 </Layout>
