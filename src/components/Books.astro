@@ -1,0 +1,32 @@
+---
+import BookCard from "./BookCard.astro";
+
+const BOOKS = [
+  {
+    title: "The Software Engineer's Guidebook",
+    author: "Gergely Orosz",
+    image: "/engineering_book.webp",
+    href: "https://www.engguidebook.com/",
+  },
+  {
+    title: "Effective Java",
+    author: "Joshua Bloch",
+    image: "/effective_java.webp",
+    href: "https://www.example.com/clean-code",
+  },
+  {
+    title: "Atomic Habits",
+    author: "James Clear",
+    image: "/atomic_habits.webp",
+    href: "https://www.example.com/clean-code",
+  },
+];
+---
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+  {
+    BOOKS.map((book) => (
+      <BookCard {...book} />
+    ))
+  }
+</div>

@@ -1,0 +1,27 @@
+---
+const { href, image, title, author } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="block max-w-xs bg-white border border-gray-300 rounded-xl shadow hover:bg-yellow-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 transition overflow-hidden"
+>
+  <div class="p-5 flex flex-col space-y-7 h-[310px]">
+    <img
+      src={image}
+      alt={`Portada del libro ${title}`}
+      class="max-h-48 mx-auto rounded-md object-contain shadow-md"
+    />
+
+    <div class="w-full text-left">
+      <h5 class="mb-1 text-base font-normal text-gray-900 dark:text-white truncate">
+        {title}
+      </h5>
+      <p class="text-xs text-gray-600 dark:text-gray-400 truncate">
+        {author}
+      </p>
+    </div>
+  </div>
+</a>
