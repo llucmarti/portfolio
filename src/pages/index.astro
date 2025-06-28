@@ -7,6 +7,7 @@ import Lluc from "../components/Lluc.astro";
 import Projects from "../components/Projects.astro"
 import Briefcase from "../components/icons/Briefcase.astro";
 import Code from "../components/icons/Code.astro";
+import TitleSection from "../components/TitleSection.astro"
 ---
 
 <Layout
@@ -20,18 +21,18 @@ import Code from "../components/icons/Code.astro";
   </SectionContainer>
   
   <SectionContainer id="experience">
-    <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+    <TitleSection>
       <Briefcase class="size-7" />
       Experience
-    </h2>
+    </TitleSection>
     <Experience />
   </SectionContainer>
 
   <SectionContainer id="projects">
-    <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+    <TitleSection>
       <Code class="size-7" />
       Projects
-    </h2>
+    </TitleSection>
     <Projects />
   </SectionContainer>
 </Layout>
