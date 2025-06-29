@@ -15,27 +15,27 @@ import TitleSection from "../components/TitleSection.astro"
   description="Lluc Martí Calveres is a software engineer with more than 3 years of experience, looking for new opportunities to grow and learn."
 >
   <main class="px-4">
-  <SectionContainer class="py-16 md:py-36">
-    <Lluc>
-      </slot>
-    </Lluc>
-  </SectionContainer>
-  <div class="space-y-4">
-  <SectionContainer id="experience">
-    <TitleSection>
-      <Briefcase class="size-7" />
-      Experience
-    </TitleSection>
-    <Experience />
-  </SectionContainer>
+    <SectionContainer class="py-16 md:py-36">
+      <Lluc>
+        </slot> 
+      </Lluc>
+    </SectionContainer>
+    <div class="space-y-4">
+      <SectionContainer id="experience">
+        <TitleSection>
+          <Briefcase class="size-7" />
+          Experience
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
 
-  <SectionContainer id="projects">
-    <TitleSection>
-      <Code class="size-7" />
-      Projects
-    </TitleSection>
-    <Projects />
-  </SectionContainer>
-  </div>
+      <SectionContainer id="projects">
+        <TitleSection>
+          <Code class="size-7" />
+          Projects
+        </TitleSection>
+        <Projects />
+      </SectionContainer>
+    </div>
   </main>
 </Layout>
