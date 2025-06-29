@@ -11,15 +11,16 @@ import TitleSection from "../components/TitleSection.astro"
 ---
 
 <Layout
-  title="Lluc's portfolio - Software engineer"
+  title="Lluc Martí Calveres"
   description="Lluc Martí Calveres is a software engineer with more than 3 years of experience, looking for new opportunities to grow and learn."
 >
+  <main class="px-4">
   <SectionContainer class="py-16 md:py-36">
     <Lluc>
       </slot>
     </Lluc>
   </SectionContainer>
-  
+  <div class="space-y-4">
   <SectionContainer id="experience">
     <TitleSection>
       <Briefcase class="size-7" />
@@ -35,4 +36,6 @@ import TitleSection from "../components/TitleSection.astro"
     </TitleSection>
     <Projects />
   </SectionContainer>
+  </div>
+  </main>
 </Layout>
