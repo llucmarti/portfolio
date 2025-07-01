@@ -12,17 +12,41 @@ const BOOKS = [
     title: "Effective Java",
     author: "Joshua Bloch",
     image: "/books/effective_java.webp",
-    href: "https://www.example.com/clean-code",
+    href: "https://www.oracle.com/java/technologies/effectivejava.html?lang=en",
   },
   {
     title: "Atomic Habits",
     author: "James Clear",
     image: "/books/atomic_habits.webp",
-    href: "https://www.example.com/clean-code",
-  }
+    href: "https://jamesclear.com/atomic-habits",
+  },
+  {
+  title: "Clean Architecture",
+  author: "Robert C. Martin (Uncle Bob)",
+  image: "/books/clean_architecture.webp",
+  href: "https://www.pearson.com/en-us/subject-catalog/p/clean-architecture-a-craftssmans-guide-to-software-structure-and-design/P200000003327/9780134494166",
+},
+{
+  title: "Domain-Driven Design",
+  author: "Eric Evans",
+  image: "/books/ddd.webp",
+  href: "https://www.domainlanguage.com/ddd/",
+},
+{
+  title: "The Lean Startup",
+  author: "Eric Ries",
+  image: "/books/lean_startup.webp",
+  href: "https://leanstartup.co/",
+},
+{
+  title: "25 Hours a Day",
+  author: "Nick Bare",
+  image: "/books/25_hours_a_day.webp",
+  href: "https://www.nickbare.com/pages/25-hours-a-day",
+},
 ];
 ---
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+<div class="grid grid-cols-1 sm:grid-cols-4 md:grid-cols-5 gap-5">
   {BOOKS.map((book) => <BookCard {...book} />)}
 </div>

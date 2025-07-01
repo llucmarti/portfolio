@@ -3,27 +3,36 @@ const { href, image, alt, title, author } = Astro.props;
 ---
 
 <div
-  class="max-w-sm bg-gray-200
-   hover:bg-yellow-100/80 hover:border-yellow-500
-  rounded-4xl overflow-hidden
-  dark:bg-gray-900/40
-  dark:hover:bg-gray-800/70 dark:hover:border-gray-400"
+  class="max-w-sm w-full
+    bg-gray-200/30
+    hover:bg-yellow-100/80 hover:border-yellow-500
+    rounded-4xl overflow-hidden
+    dark:bg-gray-900/30
+    dark:hover:bg-gray-800/70 dark:hover:border-gray-400
+    transition-colors duration-300
+  "
 >
-  <a href={href}>
-    <div class="p-10 pb-0">
-      <img class="rounded-2xl" src={image} alt={alt} />
+  <a href={href} target="_blank" rel="noopener noreferrer" class="block">
+    <div class="p-8 pb-0 sm:p-6 sm:pb-0 md:p-7 md:pb-0">
+      <img
+        class="rounded-2xl w-full h-auto object-cover"
+        src={image}
+        alt={alt}
+      />
     </div>
   </a>
-  <div class="p-10">
-    <a href={href}>
+  <div class="p-8 sm:p-6 md:p-7">
+    <a href={href} class="block">
       <h5
-        class="mb-2 text-xl tracking-tight
+        class="text-sm sm:text-base tracking-tight
         text-gray-800 dark:text-white
         truncate"
       >
         {title}
       </h5>
     </a>
-    <p class="text-gray-600 dark:text-gray-300">{author}</p>
+    <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1 truncate">
+      {author}
+    </p>
   </div>
 </div>

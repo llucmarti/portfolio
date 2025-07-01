@@ -9,6 +9,9 @@ import Briefcase from "../components/icons/Briefcase.astro";
 import Code from "../components/icons/Code.astro";
 import TitleSection from "../components/TitleSection.astro";
 import Books from "../components/Books.astro";
+import BooksIcon from "../components/icons/Books.astro";
+import Boy from "../components/icons/Boy.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
 <Layout
@@ -16,32 +19,32 @@ import Books from "../components/Books.astro";
   description="Lluc Martí Calveres is a software engineer with more than 3 years of experience, looking for new opportunities to grow and learn."
 >
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer class="py-16 md:py-24">
       <Lluc>
         </slot> 
       </Lluc>
     </SectionContainer>
   </main>
-  <div class="space-y-24">
+  <div class="space-y-24 py-10">
     <SectionContainer id="experience">
       <TitleSection>
-        <Briefcase class="size-7" />
+        <Briefcase class="size-7 -mt-2" />
         Experience
       </TitleSection>
       <Experience />
     </SectionContainer>
 
-    <SectionContainer id="projects">
+    <SectionContainer id="about-me">
       <TitleSection>
-        <Code class="size-7" />
-        Projects
+        <Boy class="size-10 -mt-2" />
+        About me
       </TitleSection>
-      <Projects />
+      <AboutMe />
     </SectionContainer>
 
     <SectionContainer id="books">
       <TitleSection>
-        <Code class="size-7" />
+        <BooksIcon class="size-7" />
         Books
       </TitleSection>
       <Books />
